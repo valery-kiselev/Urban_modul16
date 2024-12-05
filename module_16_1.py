@@ -5,11 +5,11 @@ from fastapi import FastAPI
 app = FastAPI()
 
 @app.get('/')
-async def main_page() -> dict:
+async def get_mypage() -> dict:
     return {'message': 'Главная страница'}
 
 @app.get('/user/admin')
-async def admin_page() -> dict:
+async def get_admpage() -> dict:
     return {'message': 'Вы вошли как администратор'}
 
 @app.get('/user')
